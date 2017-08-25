@@ -1,6 +1,5 @@
 import json
 import requests
-import itertools
 
 
 
@@ -43,6 +42,8 @@ def reddit(topic):
     for post in children:
         yield post["data"]["title"]
 
+handler = open("./functions_and_generators/result.txt", "w")
 python = reddit("python")
 for title in python:
-    print(title)
+    # print(title)
+    handler.write("{0}\n".format(title))
