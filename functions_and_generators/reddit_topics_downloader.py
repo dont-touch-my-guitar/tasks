@@ -47,3 +47,4 @@ python = reddit("python")
 for title in python:
     # print(title)
     handler.write("{0}\n".format(title))
+handler.close()
